@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact & Catering - Bean & Brew Cafe</title>
+</head>
+<body>
+
+    <header>
+        <h1>Get In Touch</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Our Full Menu</a></li>
+            <li><a href="contact.html">Catering & Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Catering and Large Order Request</h2>
+            <p>Use the form below to submit a request for catering or a large order pickup.</p>
+
+            <form action="/submit-catering-request" method="post">
+
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="full_name" required><br><br>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email_address" required><br><br>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone_number" placeholder="555-555-5555"><br><br>
+                </fieldset>
+                <br>
+
+                <fieldset>
+                    <legend>Order Details</legend>
+                    
+                    <label for="date">Date Needed:</label>
+                    <input type="text" id="date" name="date_needed" placeholder="MM/DD/YYYY" required><br><br>
+                    
+                    <p>Preferred Order Type (Select one):</p>
+                    <input type="radio" id="coffee" name="order_type" value="bulk_coffee" required>
+                    <label for="coffee">Bulk Coffee Service</label><br>
+                    <input type="radio" id="pastries" name="order_type" value="bulk_pastries">
+                    <label for="pastries">Bulk Pastry/Food Order</label><br>
+                    <input type="radio" id="mixed" name="order_type" value="mixed">
+                    <label for="mixed">Mixed Coffee & Pastries</label><br><br>
+                    
+                    <label for="size">Estimated Event Size:</label>
+                    <select id="size" name="event_size" required>
+                        <option value="">-- Please Select --</option>
+                        <option value="small">10-25 People</option>
+                        <option value="medium">26-50 People</option>
+                        <option value="large">50+ People</option>
+                    </select><br><br>
+
+                    <label for="details">Specific Items, Quantities, and Notes:</label><br>
+                    <textarea id="details" name="order_details" rows="6" cols="50" placeholder="e.g., 2 gallons of cold brew, 3 dozen chocolate croissants, 1 dozen plain."></textarea><br><br>
+
+                    <input type="checkbox" id="terms" name="accept_terms" required>
+                    <label for="terms">I confirm that this is a request and not a final order.</label><br><br>
+
+                </fieldset>
+                
+                <input type="submit" value="Submit Catering Request">
+                
+            </form>
+        </section>
+        
+        <section>
+            <h2>General Inquiries</h2>
+            <p>For simple questions or feedback, please email us directly at <a href="mailto:info@beanandbrew.com">info@beanandbrew.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>A representative will contact you within one business day.</p>
+    </footer>
+
+</body>
+</html>
